@@ -14,3 +14,12 @@ class Departamento:
         for i in self.lista_empleados:
             suma += i.get_salario()
         return suma
+
+    def get_nombre_depto(self):
+        return self.nombre_depto
+
+    def get_salario_total_mensual(self):
+        suma  = 0.0
+        for i in self.lista_empleados:
+            suma += i.get_salario_mensual()
+        return suma

@@ -26,3 +26,26 @@ class TestDepartamento(TestCase):
         print(res)
 
         self.assertEqual(res, 5000)
+
+
+    def test_get_salario_total_mensual(self):
+
+        em1 = mock(Empleado)
+        em2 = mock(Empleado)
+        em3 = mock(Empleado)
+
+        when(em1).get_salario_mensual().thenReturn(1200)
+        when(em2).get_salario_mensual().thenReturn(3200)
+        when(em3).get_salario_mensual().thenReturn(1600)
+
+        dep = Departamento("dep1","d01")
+
+        dep.aniadir_empleado(em1)
+        dep.aniadir_empleado(em2)
+        dep.aniadir_empleado(em3)
+
+        res = dep.get_salario_total_mensual()
+
+        print(res)
+
+        self.assertEqual(res, 6000)
