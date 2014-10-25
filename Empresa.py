@@ -1,4 +1,6 @@
 __author__ = 'alberto'
+
+
 def __init__(self, nombre_empresa, cif, razon_social):
         self.nombre_empresa = nombre_empresa
         self.cif = cif

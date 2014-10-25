@@ -15,7 +15,7 @@ class TestDepartamento(TestCase):
         when(em2).get_salario().thenReturn(2200)
         when(em3).get_salario().thenReturn(1600)
 
-        dep = Departamento("dep1","d01")
+        dep = Departamento("dep1", "d01")
 
         dep.aniadir_empleado(em1)
         dep.aniadir_empleado(em2)
@@ -27,7 +27,6 @@ class TestDepartamento(TestCase):
 
         self.assertEqual(res, 5000)
 
-
     def test_get_salario_total_mensual(self):
 
         em1 = mock(Empleado)
@@ -38,7 +37,7 @@ class TestDepartamento(TestCase):
         when(em2).get_salario_mensual().thenReturn(3200)
         when(em3).get_salario_mensual().thenReturn(1600)
 
-        dep = Departamento("dep1","d01")
+        dep = Departamento("dep1", "d01")
 
         dep.aniadir_empleado(em1)
         dep.aniadir_empleado(em2)
