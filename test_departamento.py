@@ -6,7 +6,15 @@ __author__ = 'Alberto L'
 
 
 class TestDepartamento(TestCase):
+    """
+    Clase que testea las funcionalidades de la clase departamento
+    """
     def test_get_salario_total(self):
+        """
+        Test unitario del metodo salario total
+
+        :return: True/False
+        """
         em1 = mock(Empleado)
         em2 = mock(Empleado)
         em3 = mock(Empleado)
@@ -28,7 +36,11 @@ class TestDepartamento(TestCase):
         self.assertEqual(res, 5000)
 
     def test_get_salario_total_mensual(self):
+        """
+        Test uitario que devuelve el salario total mensual
 
+        :return: True/False
+        """
         em1 = mock(Empleado)
         em2 = mock(Empleado)
         em3 = mock(Empleado)
